@@ -72,7 +72,7 @@
             <ComboBoxItem>Swedish</ComboBoxItem>
             <ComboBoxItem>Turkish</ComboBoxItem>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ngôn ngữ OCR:" VerticalAlignment="Top" Margin="14,30,0,0" Foreground="White" Width="100" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="OCR Language:" VerticalAlignment="Top" Margin="14,30,0,0" Foreground="White" Width="100" FontSize="14"/>
         <Button x:Name="_donate"
     Style="{StaticResource MaterialDesignOutlinedButton}"
     ToolTip="Thanks you for using my product ^^" Height="Auto" Margin="378,172,18,73" BorderBrush="White" Foreground="White" Content="Buy me a coffee :)" FontSize="11"/>
