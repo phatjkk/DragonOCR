@@ -1,0 +1,97 @@
+﻿<Window x:Class="DragonOCR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragonOCR"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="DragonOCR" Height="272" Width="534" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+    <Grid Background="#FF2D3436">
+        <materialDesign:Card
+  Background="#FF636E72"
+  Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+  Padding="8"
+  UniformCornerRadius="6" Margin="10,57,173,64">
+            <TextBox x:Name="_text" HorizontalAlignment="Left" Height="134" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Margin="0,0,-1,0" CaretBrush="{x:Null}" SelectionBrush="{x:Null}"/>
+        </materialDesign:Card>
+        <Grid HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="534" Background="#FF1E272E" MouseDown="Grid_MouseDown">
+            <Image VerticalAlignment="Center"
+    HorizontalAlignment="Center" Margin="2,0,509,0" Height="23" Width="23" StretchDirection="DownOnly" Stretch="Fill" RenderTransformOrigin="0.464,0.25" Source="icon_2Y9_icon.ico" >
+            </Image>
+            <TextBlock HorizontalAlignment="Left" Height="19" Margin="30,2,0,0" TextWrapping="Wrap" Text="Dragon OCR 1.0 by @phatjk" VerticalAlignment="Top" Width="171" Foreground="#FFF1F5F9" FontWeight="Bold"/>
+            <Button Height="Auto" Margin="493,4,5,6" Background="#FFD63031" BorderBrush="#FF2D3436" FontSize="7" ToolTip="Close" Click="_close"/>
+            <Button
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                ToolTip="Minimize" Height="Auto" Margin="450,4,46,6" Background="#FF2D3436" BorderBrush="#FF2D3436" Click="_minimize"/>
+        </Grid>
+        <materialDesign:Card
+            Background="#FF636E72"
+            Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+            Padding="8"
+            UniformCornerRadius="6" Margin="366,57,10,64">
+
+            <Button Content="Scan" HorizontalAlignment="Left" Height="26" Margin="10,0,0,0" VerticalAlignment="Top" Width="124" Background="#FFBAEFA2" BorderBrush="#FFBAEFA2" Foreground="#FF1D2025" Click="Button_Click_1"/>
+
+        </materialDesign:Card>
+        <ToggleButton x:Name="_googlecheck"
+  Style="{StaticResource MaterialDesignSwitchDarkToggleButton}"
+  ToolTip="Đang bật"
+  IsChecked="False" Margin="488,105,15,153" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Google after scan" VerticalAlignment="Top" Margin="378,105,0,0" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Copy after scan" VerticalAlignment="Top" Margin="378,124,0,0" Foreground="White"/>
+        <ToggleButton x:Name="_copycheck"
+            Style="{StaticResource MaterialDesignSwitchDarkToggleButton}"
+            ToolTip="MaterialDesignSwitchDarkToggleButton"
+            IsChecked="false" Margin="488,124,15,134" />
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="API-key:" VerticalAlignment="Top" Margin="378,145,0,0" Foreground="White" Width="46"/>
+        <ComboBox x:Name="_ocrlang" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Margin="119,26,0,0" Height="31" Foreground="White" Background="#FF2D3436" BorderBrush="Black" OpacityMask="#FFFF1818">
+            <ComboBoxItem IsSelected="True">Vietnamese</ComboBoxItem>
+            <ComboBoxItem>Arabic</ComboBoxItem>
+            <ComboBoxItem>Bulgarian</ComboBoxItem>
+            <ComboBoxItem>Chinese(Simplified)</ComboBoxItem>
+            <ComboBoxItem>Chinese(Traditional)</ComboBoxItem>
+            <ComboBoxItem>Croatian</ComboBoxItem>
+            <ComboBoxItem>Czech</ComboBoxItem>
+            <ComboBoxItem>Danish</ComboBoxItem>
+            <ComboBoxItem>Dutch</ComboBoxItem>
+            <ComboBoxItem>English</ComboBoxItem>
+            <ComboBoxItem>Finnish</ComboBoxItem>
+            <ComboBoxItem>French</ComboBoxItem>
+            <ComboBoxItem>German</ComboBoxItem>
+            <ComboBoxItem>Greek</ComboBoxItem>
+            <ComboBoxItem>Hungarian</ComboBoxItem>
+            <ComboBoxItem>Korean</ComboBoxItem>
+            <ComboBoxItem>Italian</ComboBoxItem>
+            <ComboBoxItem>Japanese</ComboBoxItem>
+            <ComboBoxItem>Polish</ComboBoxItem>
+            <ComboBoxItem>Portuguese</ComboBoxItem>
+            <ComboBoxItem>Russian</ComboBoxItem>
+            <ComboBoxItem>Slovenian</ComboBoxItem>
+            <ComboBoxItem>Spanish</ComboBoxItem>
+            <ComboBoxItem>Swedish</ComboBoxItem>
+            <ComboBoxItem>Turkish</ComboBoxItem>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ngôn ngữ OCR:" VerticalAlignment="Top" Margin="14,30,0,0" Foreground="White" Width="100" FontSize="14"/>
+        <Button x:Name="_donate"
+    Style="{StaticResource MaterialDesignOutlinedButton}"
+    ToolTip="Thanks you for using my product ^^" Height="Auto" Margin="378,172,18,73" BorderBrush="White" Foreground="White" Content="Buy me a coffee :)" FontSize="11"/>
+        <materialDesign:Card
+            Background="#FF636E72"
+            Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+            Padding="8"
+            UniformCornerRadius="6" Margin="10,213,10,10">
+            <Label Content="Status: " HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Height="27" Foreground="#DDFDFDFD" FontSize="14"/>
+        </materialDesign:Card>
+        <Label x:Name="_trangthai" Content="Ready to start !!" HorizontalAlignment="Left" Margin="87,224,0,0" VerticalAlignment="Top" Height="27" Foreground="#DD0CFF00" FontSize="14" Width="385"/>
+        <ProgressBar x:Name="_process"
+          Style="{DynamicResource MaterialDesignCircularProgressBar}"
+          HorizontalAlignment="Center"
+          Margin="485,224,18,17"
+          IsIndeterminate="True"
+          Value="0" Height="Auto" Width="31" Foreground="White" />
+        <Button x:Name="_copybt" Content="Copy" HorizontalAlignment="Left" Height="26" Margin="295,26,0,0" VerticalAlignment="Top" Width="66" Background="#FFBAEFA2" BorderBrush="#FFBAEFA2" Foreground="#FF1D2025" Click="_copybt_Click"/>
+        <TextBox x:Name="_apikey" ToolTip="Get free API-key from OCR.SPACE" HorizontalAlignment="Left" Height="23" Margin="429,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Foreground="White" Text="hello"/>
+
+    </Grid>
+</Window>
