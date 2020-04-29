@@ -287,6 +287,12 @@ namespace DragonOCR
         {
             System.Windows.Clipboard.SetText(textscaned);
         }
+
+        private void _donate_Click(object sender, RoutedEventArgs e)
+        {
+            
+            System.Diagnostics.Process.Start("https://raw.githubusercontent.com/phatjkk/DonateMe/master/Information");
+        }
         //        var client = new RestClient("https://ocr-phatjk.herokuapp.com/upload");
         //        client.Timeout = -1;
         //var request = new RestRequest(Method.POST);
