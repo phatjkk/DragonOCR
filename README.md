@@ -1,6 +1,6 @@
 # DragonOCR
 Desktop OCR Toolkit C#</br>
-<h2>How does it work?</h2></br>Video demo:
+<h2>How does it work?</h2></br>Video demo: https://www.youtube.com/watch?v=6PpMS8Erecg
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/6PpMS8Erecg/0.jpg)](http://www.youtube.com/watch?v=6PpMS8Erecg)
 <h2>ScreenShot</h2>
